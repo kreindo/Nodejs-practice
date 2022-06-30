@@ -9,14 +9,14 @@ class Creature {
 }
 
 class HostileCreatures extends Creature{
-    constructor(id, ai, health, stat){
+    constructor(id, ai, health, stats){
         super(id);
         this.ai = ai;
         this.health = health;
-        this.stats = stat;
+        this.stats = stats;
 
     }
-    defineNewHostileCreature = (creatureName) => console.log(`${creatureName} is created with id of ${this.id || id}, health set to = ${this.health} and stats is set to ${this.stats}`);
+    defineNewHostileCreature = (creatureName) => console.log(`${creatureName} is created with id of ${this.id || id}, health set to = ${this.health} and stats is set to ${JSON.stringify(this.stats)}`);
 
 }
 
