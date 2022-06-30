@@ -1,14 +1,15 @@
 class Animal {
-  constructor() {
-    this.name;
-    this.age;
-    this.isMammal;
+  constructor(name, age, isMammal) {
+    this.name = name;
+    this.age = age;
+    this.isMammal = isMammal;
   }
 }
 class Rabbit extends Animal {
-  constructor(name, isMammal) {
-    super(isMammal);
+  constructor(name, age, isMammal) {
+    super(age, isMammal);
     this.name = name;
+    this.age = age;
     this.isMammal = true;
   }
 
@@ -16,13 +17,16 @@ class Rabbit extends Animal {
 }
 
 class Eagle extends Animal {
-  constructor(name, isMammal) {
-    super(isMammal);
+  constructor(name, age, isMammal) {
+    super(age, isMammal);
     this.name = name;
-    this.isMammal = false
+    this.age = age;
+    this.isMammal = false;
   }
-  fly = () => `${this.name} sedang terbang`
+  fly = () => `${this.name} sedang terbang!`
 }
 
-const eagle1 = new Eagle('harold')
-console.log(eagle1)
+const myRabbit = new Rabbit('Labi', 2)
+const myEagle = new Eagle('Elo', 4)
+
+console.log(myEagle.fly())
