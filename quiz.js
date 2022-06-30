@@ -13,7 +13,7 @@ class Rabbit extends Animal {
     this.isMammal = true;
   }
 
-  eat = () => `${this.name} sedang makan!`;
+  eat() {return `${this.name} sedang makan!`};
 }
 
 class Eagle extends Animal {
@@ -23,7 +23,7 @@ class Eagle extends Animal {
     this.age = age;
     this.isMammal = false;
   }
-  fly = () => `${this.name} sedang terbang!`
+  fly() {return `${this.name} sedang terbang!`};
 }
 
 const myRabbit = new Rabbit('Labi', 2)
