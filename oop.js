@@ -1,7 +1,7 @@
 class Creature {
     constructor(id, isAlive) {
         this.id = id;
-        this.isAlive = isAlive;
+        this.isAlive = true;
         this.crData = [];
     }
     showId = () => console.log(`creature id ${this.id}`);
@@ -9,14 +9,14 @@ class Creature {
 }
 
 class HostileCreatures extends Creature{
-    constructor(id, ai, health, stats){
-        super(id);
+    constructor(ai, health, stats){
+        super();
         this.ai = ai;
         this.health = health;
         this.stats = stats;
 
     }
-    defineNewHostileCreature = (creatureName) => console.log(`${creatureName} is created with id of ${this.id || id}, health set to = ${this.health} and stats is set to ${JSON.stringify(this.stats)}`);
+    defineNewHostileCreature = (creatureName) => console.log(`${creatureName} is created with id of ${this.id}, health set to = ${this.health} and stats is set to ${JSON.stringify(this.stats)}`);
 
 }
 
@@ -27,3 +27,4 @@ const lizard = new HostileCreatures(1, 'hostile', 1000, {
 })
 
 lizard.defineNewHostileCreature('Red boi')
+console.log(lizard.isAlive)
